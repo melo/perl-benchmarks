@@ -43,3 +43,27 @@ cmpthese(
 # storable      16443/s        434%          5%         --         -94%       -94%
 # data_msgpack 271773/s       8730%       1642%      1553%           --        -6%
 # json_xs      289616/s       9309%       1756%      1661%           7%         --
+
+
+my $e1 = Data::Dumper::Dumper($hash);
+my $e2 = Storable::nfreeze($hash);
+my $e3 = JSON::XS::encode_json($hash);
+my $e4 = Data::MessagePack->pack($hash);
+
+cmpthese(
+  -2,
+  { 'eval'         => sub { $t = eval $e1 },
+    'storable'     => sub { $t = Storable::thaw($e2) },
+    'json_xs'      => sub { $t = JSON::XS::decode_json($e3) },
+    'data_msgpack' => sub { $t = Data::MessagePack->unpack($e4) },
+  }
+);
+
+## Darwin DogsHouse.lan 9.8.0 Darwin Kernel Version 9.8.0: Wed Jul 15 16:55:01 PDT 2009; root:xnu-1228.15.4~1/RELEASE_I386 i386
+## 2.4 Ghz Quad Core 2
+#
+#                  Rate         eval     storable data_msgpack      json_xs
+# eval          22550/s           --         -82%         -87%         -89%
+# storable     125431/s         456%           --         -30%         -41%
+# data_msgpack 177977/s         689%          42%           --         -17%
+# json_xs      213608/s         847%          70%          20%           --
