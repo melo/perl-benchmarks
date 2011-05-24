@@ -1,4 +1,17 @@
 #!/usr/bin/env perl
+#
+# Test the speed difference between cached calls and AUTOLOAD calls
+#
+# Sample results on my laptop:
+#
+#                 Rate not cached     cached
+# not cached  481779/s         --       -83%
+# cached     2825156/s       486%         --
+#
+# Impressive...
+#
+# Pedro Melo <melo@simplicidade.org>, 2011/05/24
+#
 
 use strict;
 use warnings;
