@@ -43,6 +43,14 @@ my $keys = sub {
   $keys_output = $source;
 };
 
+my $hslice_output;
+my $hslice = sub {
+  my ($source, %dest) = setup();
+
+  @$source{keys %dest} = values %dest;
+  $hslice_output = $source;
+};
+
 my $iter_output;
 my $iter = sub {
   my ($source, @dest) = setup();
@@ -60,6 +68,7 @@ cmpthese(
     using_splice    => $splice,
     using_keys      => $keys,
     using_iter      => $iter,
+    using_hslice    => $hslice,
   }
 );
 
@@ -67,5 +76,6 @@ cmpthese(
 cmp_deeply($var_merge_output, $splice_output, 'var_merge, same result as splice_output');
 cmp_deeply($var_merge_output, $keys_output,   'var_merge, same result as keys');
 cmp_deeply($var_merge_output, $iter_output,   'var_merge, same result as iter');
+cmp_deeply($var_merge_output, $hslice_output, 'var_merge, same result as hslice');
 
 done_testing();
