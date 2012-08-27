@@ -1,0 +1,503 @@
+perl-5.10.1
+==========
+hash size: 0
+                      Rate if_array_cast if_scalar   if if_values if_scalar_values if_each if_scalar_keys if_keys
+if_array_cast    2540298/s            --      -56% -57%      -64%             -65%    -66%           -67%    -68%
+if_scalar        5787910/s          128%        --  -1%      -17%             -20%    -22%           -26%    -28%
+if               5866844/s          131%        1%   --      -16%             -19%    -21%           -25%    -27%
+if_values        6969224/s          174%       20%  19%        --              -3%     -6%           -10%    -14%
+if_scalar_values 7218125/s          184%       25%  23%        4%               --     -3%            -7%    -10%
+if_each          7443692/s          193%       29%  27%        7%               3%      --            -4%     -8%
+if_scalar_keys   7779772/s          206%       34%  33%       12%               8%      5%             --     -3%
+if_keys          8057420/s          217%       39%  37%       16%              12%      8%             4%      --
+hash size: 3
+                       Rate if_array_cast if_scalar   if if_each if_scalar_values if_scalar_keys if_values if_keys
+if_array_cast      803848/s            --      -64% -67%    -88%             -94%           -94%      -94%    -95%
+if_scalar         2236929/s          178%        --  -8%    -66%             -83%           -84%      -85%    -85%
+if                2434322/s          203%        9%   --    -63%             -81%           -83%      -83%    -84%
+if_each           6528923/s          712%      192% 168%      --             -50%           -55%      -55%    -56%
+if_scalar_values 12947353/s         1511%      479% 432%     98%               --           -10%      -11%    -12%
+if_scalar_keys   14423242/s         1694%      545% 492%    121%              11%             --       -1%     -2%
+if_values        14588545/s         1715%      552% 499%    123%              13%             1%        --     -1%
+if_keys          14769037/s         1737%      560% 507%    126%              14%             2%        1%      --
+hash size: 5000
+                       Rate if_array_cast if_scalar    if if_each if_scalar_values if_keys if_values if_scalar_keys
+if_array_cast         570/s            --     -100% -100%   -100%            -100%   -100%     -100%          -100%
+if_scalar         1888552/s       330974%        --   -0%    -67%             -85%    -85%      -86%           -86%
+if                1897408/s       332527%        0%    --    -67%             -85%    -85%      -86%           -86%
+if_each           5671182/s       994091%      200%  199%      --             -56%    -56%      -57%           -59%
+if_scalar_values 12786096/s      2241376%      577%  574%    125%               --     -2%       -3%            -7%
+if_keys          12994248/s      2277867%      588%  585%    129%               2%      --       -2%            -6%
+if_values        13246577/s      2322101%      601%  598%    134%               4%      2%        --            -4%
+if_scalar_keys   13765837/s      2413131%      629%  626%    143%               8%      6%        4%             --
+
+
+perl-5.12.4
+==========
+hash size: 0
+                      Rate if_array_cast if_each if_scalar   if if_scalar_keys if_scalar_values if_keys if_values
+if_array_cast    3345064/s            --    -35%      -55% -58%           -59%             -60%    -62%      -62%
+if_each          5161850/s           54%      --      -30% -35%           -37%             -38%    -41%      -41%
+if_scalar        7400330/s          121%     43%        --  -7%            -9%             -10%    -15%      -16%
+if               7958323/s          138%     54%        8%   --            -3%              -4%     -9%      -10%
+if_scalar_keys   8170128/s          144%     58%       10%   3%             --              -1%     -6%       -7%
+if_scalar_values 8262254/s          147%     60%       12%   4%             1%               --     -5%       -6%
+if_keys          8728895/s          161%     69%       18%  10%             7%               6%      --       -1%
+if_values        8799974/s          163%     70%       19%  11%             8%               7%      1%        --
+hash size: 3
+                       Rate if_array_cast   if if_scalar if_each if_values if_keys if_scalar_keys if_scalar_values
+if_array_cast      601571/s            -- -74%      -75%    -89%      -95%    -96%           -96%             -96%
+if                2338467/s          289%   --       -2%    -57%      -82%    -83%           -83%             -84%
+if_scalar         2382756/s          296%   2%        --    -56%      -82%    -82%           -83%             -84%
+if_each           5381265/s          795% 130%      126%      --      -58%    -60%           -61%             -63%
+if_values        12894722/s         2044% 451%      441%    140%        --     -5%            -6%             -12%
+if_keys          13549106/s         2152% 479%      469%    152%        5%      --            -2%              -8%
+if_scalar_keys   13762559/s         2188% 489%      478%    156%        7%      2%             --              -6%
+if_scalar_values 14656117/s         2336% 527%      515%    172%       14%      8%             6%               --
+hash size: 5000
+                       Rate if_array_cast if_scalar    if if_each if_scalar_keys if_values if_scalar_values if_keys
+if_array_cast         397/s            --     -100% -100%   -100%          -100%     -100%            -100%   -100%
+if_scalar         1748490/s       440647%        --   -2%    -65%           -88%      -88%             -88%    -88%
+if                1784856/s       449814%        2%    --    -64%           -87%      -87%             -88%    -88%
+if_each           4958949/s      1249917%      184%  178%      --           -65%      -65%             -67%    -67%
+if_scalar_keys   14023271/s      3534788%      702%  686%    183%             --       -2%              -6%     -8%
+if_values        14251169/s      3592234%      715%  698%    187%             2%        --              -5%     -6%
+if_scalar_values 14952544/s      3769032%      755%  738%    202%             7%        5%               --     -1%
+if_keys          15166384/s      3822935%      767%  750%    206%             8%        6%               1%      --
+
+
+perl-5.13.5
+==========
+hash size: 0
+                      Rate if_array_cast if_scalar   if if_scalar_values if_values if_scalar_keys if_each if_keys
+if_array_cast    3298236/s            --      -45% -47%             -58%      -58%           -59%    -59%    -59%
+if_scalar        5992312/s           82%        --  -3%             -23%      -25%           -25%    -25%    -26%
+if               6177267/s           87%        3%   --             -21%      -22%           -22%    -23%    -23%
+if_scalar_values 7776386/s          136%       30%  26%               --       -2%            -2%     -3%     -4%
+if_values        7945381/s          141%       33%  29%               2%        --            -0%     -1%     -2%
+if_scalar_keys   7968898/s          142%       33%  29%               2%        0%             --     -1%     -1%
+if_each          8028248/s          143%       34%  30%               3%        1%             1%      --     -1%
+if_keys          8074001/s          145%       35%  31%               4%        2%             1%      1%      --
+hash size: 3
+                       Rate if_array_cast if_scalar   if if_each if_keys if_values if_scalar_values if_scalar_keys
+if_array_cast      555223/s            --      -74% -74%    -89%    -96%      -96%             -96%           -96%
+if_scalar         2125098/s          283%        --  -1%    -60%    -85%      -86%             -86%           -86%
+if                2136830/s          285%        1%   --    -59%    -85%      -86%             -86%           -86%
+if_each           5267435/s          849%      148% 147%      --    -62%      -64%             -65%           -65%
+if_keys          13939570/s         2411%      556% 552%    165%      --       -5%              -7%            -8%
+if_values        14743209/s         2555%      594% 590%    180%      6%        --              -2%            -3%
+if_scalar_values 15049407/s         2611%      608% 604%    186%      8%        2%               --            -1%
+if_scalar_keys   15198511/s         2637%      615% 611%    189%      9%        3%               1%             --
+hash size: 5000
+                       Rate if_array_cast if_scalar     if if_each if_keys if_scalar_keys if_scalar_values if_values
+if_array_cast         393/s            --     -100%  -100%   -100%   -100%          -100%            -100%     -100%
+if_scalar          103735/s        26283%        --    -9%    -98%    -99%           -99%             -99%      -99%
+if                 113511/s        28769%        9%     --    -98%    -99%           -99%             -99%      -99%
+if_each           4726836/s      1202079%     4457%  4064%      --    -64%           -66%             -68%      -69%
+if_keys          13192956/s      3355274%    12618% 11523%    179%      --            -5%             -10%      -13%
+if_scalar_keys   13896457/s      3534196%    13296% 12142%    194%      5%             --              -5%       -8%
+if_scalar_values 14655867/s      3727337%    14028% 12811%    210%     11%             5%               --       -3%
+if_values        15087520/s      3837120%    14444% 13192%    219%     14%             9%               3%        --
+
+
+perl-5.14.1
+==========
+hash size: 0
+                      Rate if_array_cast   if if_scalar if_keys if_values if_scalar_keys if_scalar_values if_each
+if_array_cast    2762768/s            -- -49%      -51%    -54%      -54%           -55%             -58%    -59%
+if               5416467/s           96%   --       -3%     -9%      -10%           -12%             -17%    -19%
+if_scalar        5610705/s          103%   4%        --     -6%       -7%            -8%             -14%    -16%
+if_keys          5983439/s          117%  10%        7%      --       -1%            -2%              -8%    -10%
+if_values        6028999/s          118%  11%        7%      1%        --            -2%              -8%    -10%
+if_scalar_keys   6130593/s          122%  13%        9%      2%        2%             --              -6%     -8%
+if_scalar_values 6524994/s          136%  20%       16%      9%        8%             6%               --     -2%
+if_each          6677850/s          142%  23%       19%     12%       11%             9%               2%      --
+hash size: 3
+                       Rate if_array_cast if_scalar   if if_each if_scalar_values if_keys if_values if_scalar_keys
+if_array_cast      898771/s            --      -58% -59%    -84%             -91%    -92%      -92%           -93%
+if_scalar         2144319/s          139%        --  -2%    -62%             -79%    -81%      -82%           -83%
+if                2190417/s          144%        2%   --    -61%             -78%    -81%      -82%           -82%
+if_each           5618682/s          525%      162% 157%      --             -44%    -51%      -53%           -55%
+if_scalar_values 10119529/s         1026%      372% 362%     80%               --    -12%      -15%           -18%
+if_keys          11545541/s         1185%      438% 427%    105%              14%      --       -3%            -7%
+if_values        11916585/s         1226%      456% 444%    112%              18%      3%        --            -4%
+if_scalar_keys   12363443/s         1276%      477% 464%    120%              22%      7%        4%             --
+hash size: 5000
+                       Rate if_array_cast     if if_scalar if_each if_values if_keys if_scalar_values if_scalar_keys
+if_array_cast         553/s            --   -99%     -100%   -100%     -100%   -100%            -100%          -100%
+if                 107603/s        19364%     --       -6%    -98%      -99%    -99%             -99%           -99%
+if_scalar          114110/s        20541%     6%        --    -98%      -99%    -99%             -99%           -99%
+if_each           4666301/s       843975%  4237%     3989%      --      -56%    -58%             -60%           -61%
+if_values        10556508/s      1909439%  9711%     9151%    126%        --     -4%              -9%           -11%
+if_keys          11029109/s      1994927% 10150%     9565%    136%        4%      --              -4%            -7%
+if_scalar_values 11545538/s      2088342% 10630%    10018%    147%        9%      5%               --            -3%
+if_scalar_keys   11919269/s      2155945% 10977%    10345%    155%       13%      8%               3%             --
+
+
+perl-5.14.2
+==========
+hash size: 0
+                      Rate if_array_cast if_values if_scalar_keys if_scalar_values if_keys   if if_scalar if_each
+if_array_cast    3038488/s            --      -43%           -43%             -44%    -47% -52%      -53%    -59%
+if_values        5288824/s           74%        --            -0%              -3%     -8% -16%      -18%    -29%
+if_scalar_keys   5312753/s           75%        0%             --              -2%     -7% -16%      -18%    -28%
+if_scalar_values 5435283/s           79%        3%             2%               --     -5% -14%      -16%    -27%
+if_keys          5737771/s           89%        8%             8%               6%      --  -9%      -11%    -23%
+if               6330617/s          108%       20%            19%              16%     10%   --       -2%    -15%
+if_scalar        6471745/s          113%       22%            22%              19%     13%   2%        --    -13%
+if_each          7409024/s          144%       40%            39%              36%     29%  17%       14%      --
+hash size: 3
+                       Rate if_array_cast   if if_scalar if_each if_keys if_scalar_keys if_values if_scalar_values
+if_array_cast      942351/s            -- -59%      -59%    -83%    -91%           -92%      -92%             -93%
+if                2292544/s          143%   --       -1%    -60%    -78%           -80%      -81%             -82%
+if_scalar         2323258/s          147%   1%        --    -59%    -78%           -80%      -81%             -82%
+if_each           5681788/s          503% 148%      145%      --    -46%           -50%      -53%             -56%
+if_keys          10508741/s         1015% 358%      352%     85%      --            -8%      -13%             -18%
+if_scalar_keys   11448356/s         1115% 399%      393%    101%      9%             --       -5%             -11%
+if_values        12042237/s         1178% 425%      418%    112%     15%             5%        --              -7%
+if_scalar_values 12891389/s         1268% 462%      455%    127%     23%            13%        7%               --
+hash size: 5000
+                       Rate if_array_cast     if if_scalar if_each if_keys if_scalar_values if_scalar_keys if_values
+if_array_cast         642/s            --   -99%      -99%   -100%   -100%            -100%          -100%     -100%
+if                 108814/s        16839%     --       -2%    -98%    -99%             -99%           -99%      -99%
+if_scalar          111340/s        17232%     2%        --    -98%    -99%             -99%           -99%      -99%
+if_each           4704043/s       732167%  4223%     4125%      --    -61%             -62%           -64%      -66%
+if_keys          12020118/s      1871042% 10946%    10696%    156%      --              -2%            -7%      -12%
+if_scalar_values 12307622/s      1915797% 11211%    10954%    162%      2%               --            -5%      -10%
+if_scalar_keys   12981250/s      2020659% 11830%    11559%    176%      8%               5%             --       -5%
+if_values        13650692/s      2124869% 12445%    12160%    190%     14%              11%             5%        --
+
+
+perl-5.14.2-threads
+==========
+hash size: 0
+                      Rate if_array_cast if_scalar if_scalar_values if_keys if_scalar_keys   if if_values if_each
+if_array_cast    3130863/s            --      -44%             -45%    -46%           -46% -47%      -50%    -53%
+if_scalar        5585583/s           78%        --              -1%     -4%            -5%  -5%      -11%    -15%
+if_scalar_values 5647739/s           80%        1%               --     -3%            -3%  -4%      -10%    -14%
+if_keys          5822382/s           86%        4%               3%      --            -0%  -1%       -7%    -12%
+if_scalar_keys   5850699/s           87%        5%               4%      0%             --  -1%       -6%    -11%
+if               5902145/s           89%        6%               5%      1%             1%   --       -5%    -11%
+if_values        6242645/s           99%       12%              11%      7%             7%   6%        --     -5%
+if_each          6600458/s          111%       18%              17%     13%            13%  12%        6%      --
+hash size: 3
+                      Rate if_array_cast if_scalar   if if_each if_values if_scalar_values if_keys if_scalar_keys
+if_array_cast     961031/s            --      -58% -58%    -82%      -87%             -88%    -88%           -89%
+if_scalar        2282261/s          137%        --  -1%    -57%      -69%             -70%    -72%           -73%
+if               2311791/s          141%        1%   --    -56%      -68%             -70%    -72%           -72%
+if_each          5276377/s          449%      131% 128%      --      -28%             -32%    -36%           -37%
+if_values        7310428/s          661%      220% 216%     39%        --              -5%    -11%           -13%
+if_scalar_values 7704291/s          702%      238% 233%     46%        5%               --     -7%            -8%
+if_keys          8254023/s          759%      262% 257%     56%       13%               7%      --            -2%
+if_scalar_keys   8383498/s          772%      267% 263%     59%       15%               9%      2%             --
+hash size: 5000
+                      Rate if_array_cast if_scalar    if if_each if_scalar_values if_values if_keys if_scalar_keys
+if_array_cast        576/s            --      -99%  -99%   -100%            -100%     -100%   -100%          -100%
+if_scalar         106226/s        18343%        --   -6%    -97%             -99%      -99%    -99%           -99%
+if                113464/s        19599%        7%    --    -97%             -98%      -99%    -99%           -99%
+if_each          4211937/s       731170%     3865% 3612%      --             -44%      -49%    -49%           -57%
+if_scalar_values 7515958/s      1304808%     6975% 6524%     78%               --       -9%    -10%           -24%
+if_values        8230099/s      1428796%     7648% 7153%     95%              10%        --     -1%           -16%
+if_keys          8312153/s      1443042%     7725% 7226%     97%              11%        1%      --           -16%
+if_scalar_keys   9853773/s      1710696%     9176% 8584%    134%              31%       20%     19%             --
+
+
+perl-5.16.0
+==========
+hash size: 0
+                      Rate if_array_cast if_scalar   if if_values if_keys if_scalar_keys if_scalar_values if_each
+if_array_cast    2751458/s            --      -31% -33%      -44%    -45%           -45%             -45%    -53%
+if_scalar        4008141/s           46%        --  -3%      -19%    -20%           -20%             -20%    -32%
+if               4119612/s           50%        3%   --      -17%    -18%           -18%             -18%    -30%
+if_values        4946604/s           80%       23%  20%        --     -1%            -1%              -2%    -16%
+if_keys          4999592/s           82%       25%  21%        1%      --            -0%              -1%    -15%
+if_scalar_keys   5009386/s           82%       25%  22%        1%      0%             --              -1%    -15%
+if_scalar_values 5039472/s           83%       26%  22%        2%      1%             1%               --    -14%
+if_each          5882791/s          114%       47%  43%       19%     18%            17%              17%      --
+hash size: 3
+                      Rate if_array_cast   if if_scalar if_each if_scalar_values if_values if_scalar_keys if_keys
+if_array_cast     892358/s            -- -55%      -55%    -85%             -90%      -90%           -90%    -91%
+if               1972335/s          121%   --       -1%    -67%             -78%      -79%           -79%    -79%
+if_scalar        1997668/s          124%   1%        --    -66%             -78%      -78%           -78%    -79%
+if_each          5888180/s          560% 199%      195%      --             -35%      -36%           -36%    -38%
+if_scalar_values 9091341/s          919% 361%      355%     54%               --       -1%            -2%     -4%
+if_values        9175037/s          928% 365%      359%     56%               1%        --            -1%     -3%
+if_scalar_keys   9267925/s          939% 370%      364%     57%               2%        1%             --     -2%
+if_keys          9445816/s          959% 379%      373%     60%               4%        3%             2%      --
+hash size: 5000
+                      Rate if_array_cast if_scalar    if if_each if_keys if_scalar_values if_values if_scalar_keys
+if_array_cast        640/s            --      -99%  -99%   -100%   -100%            -100%     -100%          -100%
+if_scalar         111017/s        17241%        --   -2%    -98%    -99%             -99%      -99%           -99%
+if                113047/s        17558%        2%    --    -98%    -99%             -99%      -99%           -99%
+if_each          5733947/s       895559%     5065% 4972%      --    -35%             -39%      -41%           -41%
+if_keys          8759583/s      1368172%     7790% 7649%     53%      --              -7%      -10%           -10%
+if_scalar_values 9458042/s      1477274%     8419% 8266%     65%      8%               --       -3%            -3%
+if_values        9741342/s      1521526%     8675% 8517%     70%     11%               3%        --            -0%
+if_scalar_keys   9782047/s      1527884%     8711% 8553%     71%     12%               3%        0%             --
+
+
+perl-5.16.1
+==========
+hash size: 0
+                      Rate if_array_cast if_each if_scalar_values   if if_keys if_scalar_keys if_values if_scalar
+if_array_cast    2639125/s            --    -50%             -59% -61%    -61%           -62%      -64%      -68%
+if_each          5272268/s          100%      --             -18% -23%    -23%           -25%      -29%      -36%
+if_scalar_values 6395364/s          142%     21%               --  -6%     -7%            -9%      -14%      -23%
+if               6824408/s          159%     29%               7%   --     -0%            -3%       -8%      -17%
+if_keys          6849310/s          160%     30%               7%   0%      --            -2%       -7%      -17%
+if_scalar_keys   7006392/s          165%     33%              10%   3%      2%             --       -5%      -15%
+if_values        7402152/s          180%     40%              16%   8%      8%             6%        --      -11%
+if_scalar        8271609/s          213%     57%              29%  21%     21%            18%       12%        --
+hash size: 3
+                       Rate if_array_cast if_scalar   if if_each if_scalar_keys if_keys if_scalar_values if_values
+if_array_cast      942351/s            --      -56% -57%    -88%           -92%    -93%             -93%      -93%
+if_scalar         2138404/s          127%        --  -2%    -72%           -83%    -84%             -85%      -85%
+if                2180539/s          131%        2%   --    -71%           -82%    -83%             -84%      -85%
+if_each           7558572/s          702%      253% 247%      --           -39%    -42%             -46%      -48%
+if_scalar_keys   12457489/s         1222%      483% 471%     65%             --     -5%             -11%      -14%
+if_keys          13128038/s         1293%      514% 502%     74%             5%      --              -6%       -9%
+if_scalar_values 13953422/s         1381%      553% 540%     85%            12%      6%               --       -3%
+if_values        14450688/s         1433%      576% 563%     91%            16%     10%               4%        --
+hash size: 5000
+                       Rate if_array_cast if_scalar     if if_each if_keys if_scalar_keys if_scalar_values if_values
+if_array_cast         641/s            --      -99%   -99%   -100%   -100%          -100%            -100%     -100%
+if_scalar          109301/s        16942%        --    -4%    -98%    -99%           -99%             -99%      -99%
+if                 113878/s        17655%        4%     --    -98%    -99%           -99%             -99%      -99%
+if_each           6021184/s       938687%     5409%  5187%      --    -52%           -55%             -55%      -59%
+if_keys          12602341/s      1964781%    11430% 10967%    109%      --            -5%              -5%      -15%
+if_scalar_keys   13249914/s      2065747%    12022% 11535%    120%      5%             --              -0%      -11%
+if_scalar_values 13300219/s      2073590%    12068% 11579%    121%      6%             0%               --      -10%
+if_values        14805194/s      2308237%    13445% 12901%    146%     17%            12%              11%        --
+
+
+perl-5.16.1-RC1
+==========
+hash size: 0
+                      Rate if_array_cast if_scalar   if if_values if_scalar_keys if_scalar_values if_keys if_each
+if_array_cast    3230404/s            --      -54% -54%      -55%           -55%             -55%    -56%    -62%
+if_scalar        6992266/s          116%        --  -1%       -3%            -3%              -3%     -5%    -18%
+if               7076803/s          119%        1%   --       -1%            -2%              -2%     -4%    -17%
+if_values        7171555/s          122%        3%   1%        --            -0%              -1%     -3%    -16%
+if_scalar_keys   7194615/s          123%        3%   2%        0%             --              -0%     -2%    -15%
+if_scalar_values 7225597/s          124%        3%   2%        1%             0%               --     -2%    -15%
+if_keys          7361731/s          128%        5%   4%        3%             2%               2%      --    -14%
+if_each          8511382/s          163%       22%  20%       19%            18%              18%     16%      --
+hash size: 3
+                       Rate if_array_cast if_scalar   if if_each if_keys if_scalar_keys if_scalar_values if_values
+if_array_cast      802340/s            --      -57% -59%    -88%    -94%           -94%             -94%      -94%
+if_scalar         1878800/s          134%        --  -3%    -72%    -86%           -86%             -87%      -87%
+if                1942209/s          142%        3%   --    -71%    -85%           -86%             -86%      -86%
+if_each           6813146/s          749%      263% 251%      --    -48%           -51%             -51%      -52%
+if_keys          12981272/s         1518%      591% 568%     91%      --            -6%              -7%       -9%
+if_scalar_keys   13831616/s         1624%      636% 612%    103%      7%             --              -1%       -3%
+if_scalar_values 13944615/s         1638%      642% 618%    105%      7%             1%               --       -2%
+if_values        14271326/s         1679%      660% 635%    109%     10%             3%               2%        --
+hash size: 5000
+                       Rate if_array_cast     if if_scalar if_each if_scalar_keys if_values if_scalar_values if_keys
+if_array_cast         549/s            --   -99%     -100%   -100%          -100%     -100%            -100%   -100%
+if                 109595/s        19867%     --       -2%    -98%           -99%      -99%             -99%    -99%
+if_scalar          111589/s        20230%     2%        --    -98%           -99%      -99%             -99%    -99%
+if_each           6086189/s      1108734%  5453%     5354%      --           -55%      -57%             -57%    -60%
+if_scalar_keys   13643450/s      2485581% 12349%    12126%    124%             --       -3%              -3%     -9%
+if_values        14000624/s      2550654% 12675%    12447%    130%             3%        --              -0%     -7%
+if_scalar_values 14032977/s      2556548% 12704%    12476%    131%             3%        0%               --     -7%
+if_keys          15073909/s      2746194% 13654%    13408%    148%            10%        8%               7%      --
+
+
+perl-5.16.1-threads
+==========
+hash size: 0
+                      Rate if_array_cast if_scalar_values if_values if_scalar if_each   if if_keys if_scalar_keys
+if_array_cast    2749088/s            --             -50%      -50%      -53%    -53% -54%    -54%           -55%
+if_scalar_values 5487824/s          100%               --       -0%       -6%     -7%  -7%     -8%            -9%
+if_values        5490445/s          100%               0%        --       -6%     -7%  -7%     -8%            -9%
+if_scalar        5816462/s          112%               6%        6%        --     -1%  -2%     -2%            -4%
+if_each          5873266/s          114%               7%        7%        1%      --  -1%     -1%            -3%
+if               5930203/s          116%               8%        8%        2%      1%   --     -0%            -2%
+if_keys          5949968/s          116%               8%        8%        2%      1%   0%      --            -2%
+if_scalar_keys   6051837/s          120%              10%       10%        4%      3%   2%      2%             --
+hash size: 3
+                       Rate if_array_cast if_scalar   if if_each if_keys if_scalar_values if_scalar_keys if_values
+if_array_cast      799263/s            --      -68% -70%    -88%    -93%             -93%           -94%      -94%
+if_scalar         2475844/s          210%        --  -8%    -62%    -79%             -80%           -80%      -82%
+if                2696054/s          237%        9%   --    -59%    -77%             -78%           -79%      -80%
+if_each           6585533/s          724%      166% 144%      --    -43%             -46%           -48%      -51%
+if_keys          11546182/s         1345%      366% 328%     75%      --              -5%            -9%      -14%
+if_scalar_values 12165343/s         1422%      391% 351%     85%      5%               --            -4%       -9%
+if_scalar_keys   12667783/s         1485%      412% 370%     92%     10%               4%             --       -6%
+if_values        13426401/s         1580%      442% 398%    104%     16%              10%             6%        --
+hash size: 5000
+                       Rate if_array_cast if_scalar     if if_each if_keys if_scalar_values if_values if_scalar_keys
+if_array_cast         594/s            --      -99%   -99%   -100%   -100%            -100%     -100%          -100%
+if_scalar          114538/s        19189%        --    -1%    -98%    -99%             -99%      -99%           -99%
+if                 115419/s        19337%        1%     --    -98%    -99%             -99%      -99%           -99%
+if_each           6074897/s      1022941%     5204%  5163%      --    -47%             -52%      -54%           -57%
+if_keys          11480946/s      1933344%     9924%  9847%     89%      --              -9%      -13%           -19%
+if_scalar_values 12619217/s      2125034%    10917% 10833%    108%     10%               --       -4%           -11%
+if_values        13175087/s      2218645%    11403% 11315%    117%     15%               4%        --            -7%
+if_scalar_keys   14193624/s      2390171%    12292% 12197%    134%     24%              12%        8%             --
+
+
+perl-5.6.2
+==========
+hash size: 0
+Benchmark: running if, if_array_cast, if_each, if_keys, if_scalar, if_scalar_keys, if_scalar_values, if_values, each for at least 3 CPU seconds...
+        if:  3 wallclock secs ( 3.45 usr +  0.06 sys =  3.51 CPU) @ 7600623.93/s (n=26678190)
+if_array_cast:  4 wallclock secs ( 3.03 usr +  0.04 sys =  3.07 CPU) @ 3036812.38/s (n=9323014)
+   if_each:  4 wallclock secs ( 3.68 usr +  0.01 sys =  3.69 CPU) @ 6129665.58/s (n=22618466)
+   if_keys:  4 wallclock secs ( 3.19 usr +  0.01 sys =  3.20 CPU) @ 6635516.88/s (n=21233654)
+ if_scalar:  3 wallclock secs ( 3.64 usr +  0.01 sys =  3.65 CPU) @ 6986631.23/s (n=25501204)
+if_scalar_keys:  3 wallclock secs ( 3.44 usr +  0.00 sys =  3.44 CPU) @ 6504433.72/s (n=22375252)
+if_scalar_values:  2 wallclock secs ( 3.29 usr +  0.05 sys =  3.34 CPU) @ 5715646.41/s (n=19090259)
+ if_values:  3 wallclock secs ( 3.14 usr + -0.01 sys =  3.13 CPU) @ 6715391.69/s (n=21019176)
+                      Rate if_array_cast if_scalar_values if_each if_scalar_keys if_keys if_values if_scalar   if
+if_array_cast    3036812/s            --             -47%    -50%           -53%    -54%      -55%      -57% -60%
+if_scalar_values 5715646/s           88%               --     -7%           -12%    -14%      -15%      -18% -25%
+if_each          6129666/s          102%               7%      --            -6%     -8%       -9%      -12% -19%
+if_scalar_keys   6504434/s          114%              14%      6%             --     -2%       -3%       -7% -14%
+if_keys          6635517/s          119%              16%      8%             2%      --       -1%       -5% -13%
+if_values        6715392/s          121%              17%     10%             3%      1%        --       -4% -12%
+if_scalar        6986631/s          130%              22%     14%             7%      5%        4%        --  -8%
+if               7600624/s          150%              33%     24%            17%     15%       13%        9%   --
+hash size: 3
+Benchmark: running if, if_array_cast, if_each, if_keys, if_scalar, if_scalar_keys, if_scalar_values, if_values, each for at least 3 CPU seconds...
+        if:  5 wallclock secs ( 3.09 usr +  0.00 sys =  3.09 CPU) @ 4548764.72/s (n=14055683)
+if_array_cast:  3 wallclock secs ( 3.08 usr +  0.00 sys =  3.08 CPU) @ 866300.65/s (n=2668206)
+   if_each:  3 wallclock secs ( 3.09 usr +  0.01 sys =  3.10 CPU) @ 6524411.29/s (n=20225675)
+   if_keys:  4 wallclock secs ( 3.03 usr +  0.02 sys =  3.05 CPU) @ 17270343.93/s (n=52674549)
+ if_scalar:  3 wallclock secs ( 3.06 usr +  0.01 sys =  3.07 CPU) @ 4530863.52/s (n=13909751)
+if_scalar_keys:  4 wallclock secs ( 3.05 usr +  0.00 sys =  3.05 CPU) @ 18433703.61/s (n=56222796)
+if_scalar_values:  5 wallclock secs ( 5.23 usr +  0.01 sys =  5.24 CPU) @ 12065217.94/s (n=63221742)
+ if_values:  4 wallclock secs ( 3.60 usr +  0.01 sys =  3.61 CPU) @ 16375745.98/s (n=59116443)
+                       Rate if_array_cast if_scalar   if if_each if_scalar_values if_values if_keys if_scalar_keys
+if_array_cast      866301/s            --      -81% -81%    -87%             -93%      -95%    -95%           -95%
+if_scalar         4530864/s          423%        --  -0%    -31%             -62%      -72%    -74%           -75%
+if                4548765/s          425%        0%   --    -30%             -62%      -72%    -74%           -75%
+if_each           6524411/s          653%       44%  43%      --             -46%      -60%    -62%           -65%
+if_scalar_values 12065218/s         1293%      166% 165%     85%               --      -26%    -30%           -35%
+if_values        16375746/s         1790%      261% 260%    151%              36%        --     -5%           -11%
+if_keys          17270344/s         1894%      281% 280%    165%              43%        5%      --            -6%
+if_scalar_keys   18433704/s         2028%      307% 305%    183%              53%       13%      7%             --
+hash size: 5000
+Benchmark: running if, if_array_cast, if_each, if_keys, if_scalar, if_scalar_keys, if_scalar_values, if_values, each for at least 3 CPU seconds...
+        if:  3 wallclock secs ( 3.11 usr + -0.02 sys =  3.09 CPU) @ 3301125.57/s (n=10200478)
+if_array_cast:  4 wallclock secs ( 3.44 usr +  0.00 sys =  3.44 CPU) @ 560.47/s (n=1928)
+   if_each:  4 wallclock secs ( 3.04 usr +  0.00 sys =  3.04 CPU) @ 4782831.91/s (n=14539809)
+   if_keys:  3 wallclock secs ( 3.26 usr +  0.02 sys =  3.28 CPU) @ 15250489.63/s (n=50021606)
+ if_scalar:  2 wallclock secs ( 3.04 usr +  0.00 sys =  3.04 CPU) @ 3426780.26/s (n=10417412)
+if_scalar_keys:  2 wallclock secs ( 3.20 usr +  0.00 sys =  3.20 CPU) @ 15805438.13/s (n=50577402)
+if_scalar_values:  3 wallclock secs ( 3.08 usr +  0.00 sys =  3.08 CPU) @ 15724381.17/s (n=48431094)
+ if_values:  2 wallclock secs ( 3.12 usr +  0.01 sys =  3.13 CPU) @ 16059460.38/s (n=50266111)
+                       Rate if_array_cast    if if_scalar if_each if_keys if_scalar_values if_scalar_keys if_values
+if_array_cast         560/s            -- -100%     -100%   -100%   -100%            -100%          -100%     -100%
+if                3301126/s       588898%    --       -4%    -31%    -78%             -79%           -79%      -79%
+if_scalar         3426780/s       611317%    4%        --    -28%    -78%             -78%           -78%      -79%
+if_each           4782832/s       853268%   45%       40%      --    -69%             -70%           -70%      -70%
+if_keys          15250490/s      2720942%  362%      345%    219%      --              -3%            -4%       -5%
+if_scalar_values 15724381/s      2805495%  376%      359%    229%      3%               --            -1%       -2%
+if_scalar_keys   15805438/s      2819957%  379%      361%    230%      4%               1%             --       -2%
+if_values        16059460/s      2865281%  386%      369%    236%      5%               2%             2%        --
+
+
+perl-5.8.8
+==========
+hash size: 0
+                      Rate if_array_cast   if if_scalar if_scalar_keys if_scalar_values if_keys if_each if_values
+if_array_cast    3075212/s            -- -34%      -40%           -56%             -56%    -57%    -59%      -62%
+if               4665810/s           52%   --       -9%           -33%             -33%    -35%    -38%      -42%
+if_scalar        5100035/s           66%   9%        --           -27%             -27%    -29%    -33%      -37%
+if_scalar_keys   6969220/s          127%  49%       37%             --              -0%     -2%     -8%      -14%
+if_scalar_values 6978199/s          127%  50%       37%             0%               --     -2%     -8%      -14%
+if_keys          7134217/s          132%  53%       40%             2%               2%      --     -6%      -12%
+if_each          7557689/s          146%  62%       48%             8%               8%      6%      --       -7%
+if_values        8109398/s          164%  74%       59%            16%              16%     14%      7%        --
+hash size: 3
+                       Rate if_array_cast if_scalar   if if_each if_scalar_values if_scalar_keys if_values if_keys
+if_array_cast      798038/s            --      -70% -70%    -87%             -94%           -94%      -95%    -95%
+if_scalar         2649017/s          232%        --  -0%    -57%             -81%           -81%      -82%    -83%
+if                2656375/s          233%        0%   --    -57%             -81%           -81%      -82%    -82%
+if_each           6181359/s          675%      133% 133%      --             -55%           -57%      -59%    -59%
+if_scalar_values 13746192/s         1622%      419% 417%    122%               --            -4%       -9%     -9%
+if_scalar_keys   14307214/s         1693%      440% 439%    131%               4%             --       -5%     -6%
+if_values        15044092/s         1785%      468% 466%    143%               9%             5%        --     -1%
+if_keys          15160714/s         1800%      472% 471%    145%              10%             6%        1%      --
+hash size: 5000
+                       Rate if_array_cast if_scalar    if if_each if_scalar_values if_keys if_values if_scalar_keys
+if_array_cast         457/s            --     -100% -100%   -100%            -100%   -100%     -100%          -100%
+if_scalar         1876712/s       410267%        --   -8%    -60%             -82%    -84%      -85%           -90%
+if                2049934/s       448145%        9%    --    -56%             -80%    -83%      -83%           -89%
+if_each           4651176/s      1016940%      148%  127%      --             -55%    -61%      -62%           -76%
+if_scalar_values 10356441/s      2264470%      452%  405%    123%               --    -14%      -16%           -46%
+if_keys          12075783/s      2640426%      543%  489%    160%              17%      --       -2%           -37%
+if_values        12294098/s      2688164%      555%  500%    164%              19%      2%        --           -35%
+if_scalar_keys   19053893/s      4166281%      915%  829%    310%              84%     58%       55%             --
+
+
+perl-5.8.9
+==========
+hash size: 0
+                      Rate if_array_cast   if if_keys if_values if_scalar_keys if_scalar_values if_each if_scalar
+if_array_cast    2697979/s            -- -60%    -61%      -61%           -61%             -63%    -63%      -64%
+if               6765702/s          151%   --     -1%       -3%            -3%              -7%     -7%       -9%
+if_keys          6833821/s          153%   1%      --       -2%            -2%              -6%     -6%       -8%
+if_values        6992263/s          159%   3%      2%        --            -0%              -4%     -4%       -6%
+if_scalar_keys   6992972/s          159%   3%      2%        0%             --              -4%     -4%       -6%
+if_scalar_values 7249508/s          169%   7%      6%        4%             4%               --     -0%       -3%
+if_each          7261347/s          169%   7%      6%        4%             4%               0%      --       -2%
+if_scalar        7437256/s          176%  10%      9%        6%             6%               3%      2%        --
+hash size: 3
+                       Rate if_array_cast if_scalar   if if_each if_scalar_keys if_values if_scalar_values if_keys
+if_array_cast      739032/s            --      -62% -68%    -85%           -93%      -93%             -94%    -96%
+if_scalar         1953617/s          164%        -- -16%    -60%           -80%      -83%             -84%    -89%
+if                2323759/s          214%       19%   --    -52%           -77%      -79%             -81%    -87%
+if_each           4838400/s          555%      148% 108%      --           -51%      -57%             -61%    -73%
+if_scalar_keys    9964844/s         1248%      410% 329%    106%             --      -11%             -19%    -45%
+if_values        11240204/s         1421%      475% 384%    132%            13%        --              -9%    -37%
+if_scalar_values 12334204/s         1569%      531% 431%    155%            24%       10%               --    -31%
+if_keys          17965453/s         2331%      820% 673%    271%            80%       60%              46%      --
+hash size: 5000
+                       Rate if_array_cast    if if_scalar if_each if_scalar_keys if_scalar_values if_keys if_values
+if_array_cast         291/s            -- -100%     -100%   -100%          -100%            -100%   -100%     -100%
+if                1414768/s       486376%    --       -5%    -56%           -87%             -87%    -87%      -89%
+if_scalar         1484555/s       510373%    5%        --    -54%           -86%             -86%    -87%      -88%
+if_each           3195950/s      1098846%  126%      115%      --           -71%             -71%    -71%      -74%
+if_scalar_keys   10932450/s      3759085%  673%      636%    242%             --              -1%     -1%      -13%
+if_scalar_values 10996541/s      3781123%  677%      641%    244%             1%               --     -0%      -12%
+if_keys          11010047/s      3785768%  678%      642%    244%             1%               0%      --      -12%
+if_values        12496691/s      4296958%  783%      742%    291%            14%              14%     14%        --
+
+
+perl-blead
+==========
+hash size: 0
+                      Rate if_array_cast   if if_scalar if_scalar_keys if_scalar_values if_keys if_values if_each
+if_array_cast    2059868/s            -- -55%      -55%           -55%             -56%    -56%      -58%    -68%
+if               4595025/s          123%   --       -0%            -1%              -1%     -3%       -6%    -29%
+if_scalar        4613702/s          124%   0%        --            -0%              -1%     -2%       -5%    -29%
+if_scalar_keys   4627940/s          125%   1%        0%             --              -1%     -2%       -5%    -29%
+if_scalar_values 4664855/s          126%   2%        1%             1%               --     -1%       -4%    -28%
+if_keys          4727167/s          129%   3%        2%             2%               1%      --       -3%    -27%
+if_values        4867411/s          136%   6%        5%             5%               4%      3%        --    -25%
+if_each          6487400/s          215%  41%       41%            40%              39%     37%       33%      --
+hash size: 3
+                       Rate if_array_cast if_each if_keys if_values if_scalar_values if_scalar_keys   if if_scalar
+if_array_cast      665386/s            --    -88%    -94%      -95%             -95%           -96% -96%      -97%
+if_each           5585233/s          739%      --    -50%      -57%             -59%           -63% -63%      -71%
+if_keys          11245367/s         1590%    101%      --      -13%             -18%           -25% -25%      -42%
+if_values        12935396/s         1844%    132%     15%        --              -6%           -14% -14%      -34%
+if_scalar_values 13769172/s         1969%    147%     22%        6%               --            -8%  -8%      -29%
+if_scalar_keys   14988161/s         2153%    168%     33%       16%               9%             --  -0%      -23%
+if               15000915/s         2154%    169%     33%       16%               9%             0%   --      -23%
+if_scalar        19506546/s         2832%    249%     73%       51%              42%            30%  30%        --
+hash size: 5000
+                       Rate if_array_cast if_each if_scalar_values if_values if_keys if_scalar if_scalar_keys    if
+if_array_cast         637/s            --   -100%            -100%     -100%   -100%     -100%          -100% -100%
+if_each           6797732/s      1067873%      --             -54%      -55%    -55%      -59%           -61%  -63%
+if_scalar_values 14782803/s      2322385%    117%               --       -1%     -2%      -12%           -16%  -19%
+if_values        14966020/s      2351170%    120%               1%        --     -1%      -11%           -15%  -18%
+if_keys          15120579/s      2375452%    122%               2%        1%      --      -10%           -14%  -17%
+if_scalar        16784315/s      2636837%    147%              14%       12%     11%        --            -5%   -8%
+if_scalar_keys   17633016/s      2770174%    159%              19%       18%     17%        5%             --   -3%
+if               18195406/s      2858530%    168%              23%       22%     20%        8%             3%    --
+
+
