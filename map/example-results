@@ -1,0 +1,9 @@
+$ perl map/benchmark_map.pl
+        Rate  EXPR BLOCK
+EXPR  21.6/s    --   -2%
+BLOCK 22.1/s    2%    --
+ok 1 - The reference isa ARRAY
+ok 2 - The reference isa ARRAY
+ok 3
+ok 4
+1..4
