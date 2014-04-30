@@ -39,7 +39,7 @@ sub string_trim {
 
 sub regex { 
     my $string = shift;
-    $string =~ s/^\s*|\s*$//g;
+    $string =~ s/^\s+|\s+$//g;
     return $string;
 }
 
